@@ -4,44 +4,44 @@
 
 using namespace std; 
 
-Stroka::Stroka(const char* string) { // Конструктор класса Stroka, принимающий const char*
-    strcpy(str, string); // Копируем строку string в поле str класса Stroka
+Stroka::Stroka(const char* string) { // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° Stroka, РїСЂРёРЅРёРјР°СЋС‰РёР№ const char*
+    strcpy(str, string); // РљРѕРїРёСЂСѓРµРј СЃС‚СЂРѕРєСѓ string РІ РїРѕР»Рµ str РєР»Р°СЃСЃР° Stroka
 }
 
-Stroka::Stroka(const Stroka& s) { // Конструктор копирования класса Stroka
-    strcpy(str, s.str); // Копируем строку s.str в поле str класса Stroka
+Stroka::Stroka(const Stroka& s) { // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РєР»Р°СЃСЃР° Stroka
+    strcpy(str, s.str); // РљРѕРїРёСЂСѓРµРј СЃС‚СЂРѕРєСѓ s.str РІ РїРѕР»Рµ str РєР»Р°СЃСЃР° Stroka
 }
 
-Stroka::~Stroka() { // Деструктор класса Stroka
-    // Деструктор (не требуется явных действий, так как нет динамической памяти)
+Stroka::~Stroka() { // Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° Stroka
+    // Р”РµСЃС‚СЂСѓРєС‚РѕСЂ (РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ СЏРІРЅС‹С… РґРµР№СЃС‚РІРёР№, С‚Р°Рє РєР°Рє РЅРµС‚ РґРёРЅР°РјРёС‡РµСЃРєРѕР№ РїР°РјСЏС‚Рё)
 }
 
-Stroka& Stroka::operator=(const Stroka& s) { // Перегрузка оператора присваивания для класса Stroka
-    if (this != &s) { // Проверяем, не является ли объект s текущим объектом
-        strcpy(str, s.str); // Копируем строку s.str в поле str класса Stroka
+Stroka& Stroka::operator=(const Stroka& s) { // РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РїСЂРёСЃРІР°РёРІР°РЅРёСЏ РґР»СЏ РєР»Р°СЃСЃР° Stroka
+    if (this != &s) { // РџСЂРѕРІРµСЂСЏРµРј, РЅРµ СЏРІР»СЏРµС‚СЃСЏ Р»Рё РѕР±СЉРµРєС‚ s С‚РµРєСѓС‰РёРј РѕР±СЉРµРєС‚РѕРј
+        strcpy(str, s.str); // РљРѕРїРёСЂСѓРµРј СЃС‚СЂРѕРєСѓ s.str РІ РїРѕР»Рµ str РєР»Р°СЃСЃР° Stroka
     }
     return *this; 
 }
 
-Stroka Stroka::operator+(const Stroka& s) const { // Перегрузка оператора сложения для класса Stroka (const метод)
+Stroka Stroka::operator+(const Stroka& s) const { // РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃР»РѕР¶РµРЅРёСЏ РґР»СЏ РєР»Р°СЃСЃР° Stroka (const РјРµС‚РѕРґ)
     Stroka temp; 
-    strcpy(temp.str, str); // Копируем строку str в поле str временного объекта
-    strcat(temp.str, s.str); // Конкатенируем строку s.str к строке str временного объекта
+    strcpy(temp.str, str); // РљРѕРїРёСЂСѓРµРј СЃС‚СЂРѕРєСѓ str РІ РїРѕР»Рµ str РІСЂРµРјРµРЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    strcat(temp.str, s.str); // РљРѕРЅРєР°С‚РµРЅРёСЂСѓРµРј СЃС‚СЂРѕРєСѓ s.str Рє СЃС‚СЂРѕРєРµ str РІСЂРµРјРµРЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
     return temp; 
 }
 
-bool Stroka::operator==(const Stroka& s) const { // Перегрузка оператора сравнения для класса Stroka (const метод)
-    return strcmp(str, s.str) == 0; // Сравниваем строки str и s.str с помощью функции strcmp и возвращаем результат
+bool Stroka::operator==(const Stroka& s) const { // РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃСЂР°РІРЅРµРЅРёСЏ РґР»СЏ РєР»Р°СЃСЃР° Stroka (const РјРµС‚РѕРґ)
+    return strcmp(str, s.str) == 0; // РЎСЂР°РІРЅРёРІР°РµРј СЃС‚СЂРѕРєРё str Рё s.str СЃ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё strcmp Рё РІРѕР·РІСЂР°С‰Р°РµРј СЂРµР·СѓР»СЊС‚Р°С‚
 }
 
-int Stroka::dlina() const { // Метод dlina класса Stroka (const метод)
-    return strlen(str); // Возвращаем длину строки str с помощью функции strlen
+int Stroka::dlina() const { // РњРµС‚РѕРґ dlina РєР»Р°СЃСЃР° Stroka (const РјРµС‚РѕРґ)
+    return strlen(str); // Р’РѕР·РІСЂР°С‰Р°РµРј РґР»РёРЅСѓ СЃС‚СЂРѕРєРё str СЃ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё strlen
 }
 
-void Stroka::vvod() { // Метод vvod класса Stroka
-    cin >> str; // Вводим строку с помощью стандартного потока ввода cin
+void Stroka::vvod() { // РњРµС‚РѕРґ vvod РєР»Р°СЃСЃР° Stroka
+    cin >> str; // Р’РІРѕРґРёРј СЃС‚СЂРѕРєСѓ СЃ РїРѕРјРѕС‰СЊСЋ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ РїРѕС‚РѕРєР° РІРІРѕРґР° cin
 }
 
-void Stroka::vyvod() const { // Метод vyvod класса Stroka (const метод)
-    cout << str; // Выводим строку с помощью стандартного потока вывода cout
+void Stroka::vyvod() const { // РњРµС‚РѕРґ vyvod РєР»Р°СЃСЃР° Stroka (const РјРµС‚РѕРґ)
+    cout << str; // Р’С‹РІРѕРґРёРј СЃС‚СЂРѕРєСѓ СЃ РїРѕРјРѕС‰СЊСЋ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ РїРѕС‚РѕРєР° РІС‹РІРѕРґР° cout
 }
