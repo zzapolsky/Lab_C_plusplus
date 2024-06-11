@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 
-//  Î‡ÒÒ Point
+// –ö–ª–∞—Å—Å Point
 class Point {
 protected:
     int X, Y;
