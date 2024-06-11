@@ -9,7 +9,7 @@ void encrypt_file(const std::string& input_file, const std::string& output_file,
     std::ofstream outfile(output_file);
 
     if (!infile || !outfile) {
-        std::cerr << "Îøèáêà ïðè îòêðûòèè âõîäíîãî èëè âûõîäíîãî ôàéëà." << std::endl;
+        std::cerr << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ð¸ Ð²Ñ…Ð¾Ð´Ð½Ð¾Ð³Ð¾ Ð¸Ð»Ð¸ Ð²Ñ‹Ñ…Ð¾Ð´Ð½Ð¾Ð³Ð¾ Ñ„Ð°Ð¹Ð»Ð°." << std::endl;
         return;
     }
 
@@ -28,17 +28,17 @@ int main() {
     setlocale(LC_ALL, "Russian");
     std::string input_file, output_file, key;
 
-    std::cout << "Ââåäèòå èìÿ âõîäíîãî ôàéëà: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ð²Ñ…Ð¾Ð´Ð½Ð¾Ð³Ð¾ Ñ„Ð°Ð¹Ð»Ð°: ";
     std::cin >> input_file;
 
-    std::cout << "Ââåäèòå èìÿ âûõîäíîãî ôàéëà: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ð²Ñ‹Ñ…Ð¾Ð´Ð½Ð¾Ð³Ð¾ Ñ„Ð°Ð¹Ð»Ð°: ";
     std::cin >> output_file;
 
-    std::cout << "Ââåäèòå öèôðîâîé êëþ÷: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ†Ð¸Ñ„Ñ€Ð¾Ð²Ð¾Ð¹ ÐºÐ»ÑŽÑ‡: ";
     std::cin >> key;
 
     encrypt_file(input_file, output_file, key);
-    std::cout << "Ôàéë '" << input_file << "' áûë çàøèôðîâàí è ñîõðàíåí â '" << output_file << "' ñ èñïîëüçîâàíèåì êëþ÷à '" << key << "'." << std::endl;
+    std::cout << "Ð¤Ð°Ð¹Ð» '" << input_file << "' Ð±Ñ‹Ð» Ð·Ð°ÑˆÐ¸Ñ„Ñ€Ð¾Ð²Ð°Ð½ Ð¸ ÑÐ¾Ñ…Ñ€Ð°Ð½ÐµÐ½ Ð² '" << output_file << "' Ñ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ð¸ÐµÐ¼ ÐºÐ»ÑŽÑ‡Ð° '" << key << "'." << std::endl;
 
     return 0;
 }
