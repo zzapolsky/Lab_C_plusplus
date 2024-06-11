@@ -3,13 +3,13 @@
 
 void sort_array_interval(int arr[], int n, int start, int end) {
     if (start < 0 || end >= n || start > end) {
-        std::cout << "Íåâåðíûé èíòåðâàë èíäåêñîâ" << std::endl;
+        std::cout << "Неверный интервал индексов" << std::endl;
         return;
     }
 
     std::sort(arr + start, arr + end + 1, std::greater<int>());
 
-    std::cout << "Îòñîðòèðîâàííûé èíòåðâàë: ";
+    std::cout << "Отсортированный интервал: ";
     for (int i = start; i <= end; i++) {
         std::cout << arr[i] << " ";
     }
