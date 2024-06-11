@@ -2,16 +2,16 @@
 #include <fstream>
 #include <string>
 #include <locale.h>
-#include <thread> // Добавлена библиотека для работы с потоками
+#include <thread> // Р”РѕР±Р°РІР»РµРЅР° Р±РёР±Р»РёРѕС‚РµРєР° РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РїРѕС‚РѕРєР°РјРё
 
-class FileEncryptor { // Создан класс FileEncryptor
+class FileEncryptor { // РЎРѕР·РґР°РЅ РєР»Р°СЃСЃ FileEncryptor
 public:
     void encrypt_file(const std::string& input_file, const std::string& output_file, const std::string& key) {
         std::ifstream infile(input_file);
         std::ofstream outfile(output_file);
 
         if (!infile || !outfile) {
-            std::cerr << "Ошибка при открытии входного или выходного файла." << std::endl;
+            std::cerr << "РћС€РёР±РєР° РїСЂРё РѕС‚РєСЂС‹С‚РёРё РІС…РѕРґРЅРѕРіРѕ РёР»Рё РІС‹С…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р°." << std::endl;
             return;
         }
 
@@ -31,19 +31,19 @@ int main() {
     setlocale(LC_ALL, "Russian");
     std::string input_file, output_file, key;
 
-    std::cout << "Введите имя входного файла: ";
+    std::cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РІС…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р°: ";
     std::cin >> input_file;
 
-    std::cout << "Введите имя выходного файла: ";
+    std::cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РІС‹С…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р°: ";
     std::cin >> output_file;
 
-    std::cout << "Введите цифровой ключ: ";
+    std::cout << "Р’РІРµРґРёС‚Рµ С†РёС„СЂРѕРІРѕР№ РєР»СЋС‡: ";
     std::cin >> key;
 
-    FileEncryptor encryptor; // Создан экземпляр класса FileEncryptor
-    std::thread encrypt_thread(&FileEncryptor::encrypt_file, &encryptor, input_file, output_file, key); // Создан поток, выполняющий метод encrypt_file
-    encrypt_thread.join(); // Ожидание завершения потока
-    std::cout << "Файл '" << input_file << "' был зашифрован и сохранен в '" << output_file << "' с использованием ключа '" << key << "'." << std::endl;
+    FileEncryptor encryptor; // РЎРѕР·РґР°РЅ СЌРєР·РµРјРїР»СЏСЂ РєР»Р°СЃСЃР° FileEncryptor
+    std::thread encrypt_thread(&FileEncryptor::encrypt_file, &encryptor, input_file, output_file, key); // РЎРѕР·РґР°РЅ РїРѕС‚РѕРє, РІС‹РїРѕР»РЅСЏСЋС‰РёР№ РјРµС‚РѕРґ encrypt_file
+    encrypt_thread.join(); // РћР¶РёРґР°РЅРёРµ Р·Р°РІРµСЂС€РµРЅРёСЏ РїРѕС‚РѕРєР°
+    std::cout << "Р¤Р°Р№Р» '" << input_file << "' Р±С‹Р» Р·Р°С€РёС„СЂРѕРІР°РЅ Рё СЃРѕС…СЂР°РЅРµРЅ РІ '" << output_file << "' СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј РєР»СЋС‡Р° '" << key << "'." << std::endl;
 
     return 0;
 }
