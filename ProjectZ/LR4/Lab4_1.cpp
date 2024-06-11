@@ -6,7 +6,7 @@
 #include <memory>
 using namespace std;
 
-// Функция 1 для определения длины строки
+// Р¤СѓРЅРєС†РёСЏ 1 РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РґР»РёРЅС‹ СЃС‚СЂРѕРєРё
 int Lab4_1::dlina1(char* str) {
 	int len = 0;
 	while (str[len] != '\0') {
@@ -15,7 +15,7 @@ int Lab4_1::dlina1(char* str) {
 	return len;
 }
 
-// Функция 2 для определения длины строки
+// Р¤СѓРЅРєС†РёСЏ 2 РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РґР»РёРЅС‹ СЃС‚СЂРѕРєРё
 int Lab4_1::dlina2(char* str) {
 	int len = 0;
 	for (int i = 0; str[i] != '\0'; i++) {
@@ -24,12 +24,12 @@ int Lab4_1::dlina2(char* str) {
 	return len;
 }
 
-// Функция 3 для определения длины строки
+// Р¤СѓРЅРєС†РёСЏ 3 РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РґР»РёРЅС‹ СЃС‚СЂРѕРєРё
 int Lab4_1::dlina3(char* str) {
 	return strlen(str);
 }
 
-// Функция для выделения памяти и копирования строки
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІС‹РґРµР»РµРЅРёСЏ РїР°РјСЏС‚Рё Рё РєРѕРїРёСЂРѕРІР°РЅРёСЏ СЃС‚СЂРѕРєРё
 char* Lab4_1::kopir(char* str2) {
 	int len = Lab4_1::dlina1(str2);
 	char* str1 = (char*)malloc((len + 1) * sizeof(char));
@@ -39,12 +39,12 @@ char* Lab4_1::kopir(char* str2) {
 	return str1;
 }
 
-// Функция для сравнения строк
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ СЃС‚СЂРѕРє
 int Lab4_1::sravn(char* str1, char* str2) {
 	return strcmp(str1, str2);
 }
 
-// Функция для конкатенации строк
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РєРѕРЅРєР°С‚РµРЅР°С†РёРё СЃС‚СЂРѕРє
 char* Lab4_1::konkat(char* str1, char* str2) {
 	int len1 = Lab4_1::dlina1(str1);
 	int len2 = Lab4_1::dlina1(str2);
@@ -61,7 +61,7 @@ int main() {
 
 	setlocale(LC_ALL, "Russian");
 
-	//функция malloc
+	//С„СѓРЅРєС†РёСЏ malloc
 	/*char* str1, * str2;
 	str1 = (char*)malloc(100 * sizeof(char));
 	memcpy(str1, "qwerty", strlen("qwerty") + 1);
@@ -69,39 +69,39 @@ int main() {
 	str2 = (char*)malloc(100 * sizeof(char));
 	memcpy(str2, "123456789", strlen("123456789") + 1);
 	*/
-	//функция calloc
+	//С„СѓРЅРєС†РёСЏ calloc
 	
 
 	char* str1, * str2;
 	str1 = (char*)calloc(100, sizeof(char));
-	memcpy(str1, "qwerty", 7); // Копируем 6 символов плюс завершающий ноль
+	memcpy(str1, "qwerty", 7); // РљРѕРїРёСЂСѓРµРј 6 СЃРёРјРІРѕР»РѕРІ РїР»СЋСЃ Р·Р°РІРµСЂС€Р°СЋС‰РёР№ РЅРѕР»СЊ
 
 	str2 = (char*)calloc(100, sizeof(char));
-	memcpy(str2, "123456789", 10); // Копируем 9 символов плюс завершающий ноль
+	memcpy(str2, "123456789", 10); // РљРѕРїРёСЂСѓРµРј 9 СЃРёРјРІРѕР»РѕРІ РїР»СЋСЃ Р·Р°РІРµСЂС€Р°СЋС‰РёР№ РЅРѕР»СЊ
 
 
 
 
-	//использование функций длины строки
+	//РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С„СѓРЅРєС†РёР№ РґР»РёРЅС‹ СЃС‚СЂРѕРєРё
 
-	cout << "Длина str1= " << Lab4_1::dlina1(str1) << " , str2= ";
+	cout << "Р”Р»РёРЅР° str1= " << Lab4_1::dlina1(str1) << " , str2= ";
 	cout << Lab4_1::dlina1(str2) << endl;
 
-	cout << "Длина str1= " << Lab4_1::dlina2(str1) << " , str2= ";
+	cout << "Р”Р»РёРЅР° str1= " << Lab4_1::dlina2(str1) << " , str2= ";
 	cout << Lab4_1::dlina2(str2) << endl;
 
-	cout << "Длина str1= " << Lab4_1::dlina3(str1) << " , str2= ";
+	cout << "Р”Р»РёРЅР° str1= " << Lab4_1::dlina3(str1) << " , str2= ";
 	cout << Lab4_1::dlina3(str2) << endl;
 
-	cout << "Результат сравнения: str1= " << str1;
+	cout << "Р РµР·СѓР»СЊС‚Р°С‚ СЃСЂР°РІРЅРµРЅРёСЏ: str1= " << str1;
 	cout << ", str2=" << str2 << ", " << Lab4_1::sravn(str1, str2) << endl;
 
 	Lab4_1::konkat(str1, str2);
-	cout << "Результат сцепления: str1= " << str1;
+	cout << "Р РµР·СѓР»СЊС‚Р°С‚ СЃС†РµРїР»РµРЅРёСЏ: str1= " << str1;
 	cout << ", str2=" << str2 << endl;
 
 	char* str3 = Lab4_1::kopir(str2);
-	cout << "Результат копирования: str3= " << str3;
+	cout << "Р РµР·СѓР»СЊС‚Р°С‚ РєРѕРїРёСЂРѕРІР°РЅРёСЏ: str3= " << str3;
 	cout << ", str2=" << str2 << endl;
 
 	free(str1);
