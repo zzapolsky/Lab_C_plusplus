@@ -14,7 +14,7 @@ void find_substring(FILE* in, const char* sub) {
             buffer[i] = ch;
             i++;
             if (i == strlen(sub)) {
-                printf("Подстрока '%s' найдена в файле\n", sub);
+                printf("РџРѕРґСЃС‚СЂРѕРєР° '%s' РЅР°Р№РґРµРЅР° РІ С„Р°Р№Р»Рµ\n", sub);
                 i = 0;
             }
         }
@@ -28,12 +28,12 @@ int main(void) {
     setlocale(LC_ALL, "Russian");
     char name[50], sub[50];
     FILE* in;
-    printf("Введите имя файла для просмотра: ");
+    printf("Р’РІРµРґРёС‚Рµ РёРјСЏ С„Р°Р№Р»Р° РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР°: ");
     scanf("%s", name);
     if (!(in = fopen(name, "r")))
-        printf("Файл %s не открыт\n", name);
+        printf("Р¤Р°Р№Р» %s РЅРµ РѕС‚РєСЂС‹С‚\n", name);
     else {
-        printf("Введите искомую подстроку: ");
+        printf("Р’РІРµРґРёС‚Рµ РёСЃРєРѕРјСѓСЋ РїРѕРґСЃС‚СЂРѕРєСѓ: ");
         scanf("%s", sub);
         find_substring(in, sub);
         fclose(in);
