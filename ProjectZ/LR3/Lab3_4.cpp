@@ -3,13 +3,13 @@
 
 void sort_array_interval(int arr[], int n, int start, int end) {
     if (start < 0 || end >= n || start > end) {
-        std::cout << "Íåâåğíûé èíòåğâàë èíäåêñîâ" << std::endl;
+        std::cout << "ÃÃ¥Ã¢Ã¥Ã°Ã­Ã»Ã© Ã¨Ã­Ã²Ã¥Ã°Ã¢Ã Ã« Ã¨Ã­Ã¤Ã¥ÃªÃ±Ã®Ã¢" << std::endl;
         return;
     }
 
     std::sort(arr + start, arr + end + 1);
 
-    std::cout << "Îòñîğòèğîâàííûé èíòåğâàë: ";
+    std::cout << "ÃÃ²Ã±Ã®Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã­Ã»Ã© Ã¨Ã­Ã²Ã¥Ã°Ã¢Ã Ã«: ";
     for (int i = start; i <= end; i++) {
         std::cout << arr[i] << " ";
     }
