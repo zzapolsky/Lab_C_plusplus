@@ -10,10 +10,10 @@ int main(void) {
     char name[50], ch;
     int empty_chars = 0, non_empty_chars = 0;
     FILE* in;
-    printf("Введите имя файла для просмотра: ");
+    printf("Р’РІРµРґРёС‚Рµ РёРјСЏ С„Р°Р№Р»Р° РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР°: ");
     scanf("%s", name);
     if (!(in = fopen(name, "r")))
-        printf("Файл %s не открыт\n", name);
+        printf("Р¤Р°Р№Р» %s РЅРµ РѕС‚РєСЂС‹С‚\n", name);
     else {
         while ((ch = getc(in)) != EOF) {
             putchar(ch);
@@ -23,8 +23,8 @@ int main(void) {
                 non_empty_chars++;
         }
         fclose(in);
-        printf("\nПустых символов: %d\n", empty_chars);
-        printf("Непустых символов: %d\n", non_empty_chars);
+        printf("\nРџСѓСЃС‚С‹С… СЃРёРјРІРѕР»РѕРІ: %d\n", empty_chars);
+        printf("РќРµРїСѓСЃС‚С‹С… СЃРёРјРІРѕР»РѕРІ: %d\n", non_empty_chars);
     }
     return 0;
 }
@@ -32,10 +32,10 @@ int main(void) {
 {
 	char ch, name[50];
 		FILE* in;
-		printf("Введите имя файла для просмотра:");
+		printf("Р’РІРµРґРёС‚Рµ РёРјСЏ С„Р°Р№Р»Р° РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР°:");
 		scanf("%s", name);
 		if ((in = fopen(name, "r")) == NULL)
-			printf("Файл %s не открыт", name);
+			printf("Р¤Р°Р№Р» %s РЅРµ РѕС‚РєСЂС‹С‚", name);
 		else
 			while (!feof(in))
 		{
