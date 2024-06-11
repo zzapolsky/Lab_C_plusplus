@@ -5,7 +5,7 @@
 using namespace std;
 #define N 5
 
-//Заранее обьявленные функции
+//Г‡Г Г°Г Г­ГҐГҐ Г®ГЎГјГїГўГ«ГҐГ­Г­Г»ГҐ ГґГіГ­ГЄГ¶ГЁГЁ
 float minArray(float arr[N][N]);
 float maxArray(float arr[N][N]);
 float maxDownTriangleArray(float arr[N][N]);
@@ -45,36 +45,36 @@ int main(void)
 			cout << setw(8) << setprecision(5) << m[i][j] << " ";
 		cout << endl;
 	}
-	//getch();//Поскольку conio не работает он тут не нужен(
+	//getch();//ГЏГ®Г±ГЄГ®Г«ГјГЄГі conio Г­ГҐ Г°Г ГЎГ®ГІГ ГҐГІ Г®Г­ ГІГіГІ Г­ГҐ Г­ГіГ¦ГҐГ­(
 
-	cout << "Минимум матрицы: " << minArray(m) << "\n";
-	cout << "Максимум матрицы: " << maxArray(m) << "\n";
-	cout << "Максимум нижнетреугольной части: " << maxDownTriangleArray(m) << "\n";
-	cout << "Максимум верхнереугольной части: " << maxUpTriangleArray(m) << "\n";
-	cout << "Минимум нижнереугольной части: " << minDownTriangleArray(m) << "\n";
-	cout << "Минимум верхнереугольной части: " << minUpTriangleArray(m) << "\n";
-	cout << "Минимум главной диагонали: " << minMajorDiag(m) << "\n";
-	cout << "Максимум главной диагонали: " << maxMajorDiag(m) << "\n";
-	cout << "Минимум второстепеной диагонали: " << minSecondDiag(m) << "\n";
-	cout << "Максимум второстепенной диагонали: " << maxSecondDiag(m) << "\n";
-	cout << "Среднее арифметическое эллементов матрицы: " << midArifmeticMatrix(m) << "\n";
-	cout << "Среднее арифметическое нижнего треугольника: " << midBottomTriangleMatrix(m) << "\n";
-	cout << "Среднее арифметическое верхнего треугольника: " << midUpTriangleMatrix(m) << "\n";
-	cout << "Сумма строк массива: "; summLineOnMatrix(m);
-	cout << "Сумма столбцов массива: "; summColumnOnMatrix(m);
-	cout << "Минимальное число в строках массива: "; minNumberOnLine(m);
-	cout << "Минимальное число в столбцоах массива: "; minNumberOnColumn(m);
-	cout << "Максимальное число в строках массива: "; maxNumberOnLine(m);
-	cout << "Максимальное число в столбцах массива: "; maxNumberOnColumn(m);
-	cout << "Среднее значение в строках матрицы: "; midNumberOnLine(m);
-	cout << "Среднее значение в столбцах матрицы: "; midNumberOnColumn(m);
-	cout << "Сумма эллементов нижнего треугольника матрицы: " << summBottomTriangle(m) << "\n";
-	cout << "Сумма эллементов верхнего треугольника матрицы: " << summUpTriangle(m) << "\n";
-	cout << "Наиболее приближенный эллемент массива к среднему: " << closest(m) << "\n";
+	cout << "ГЊГЁГ­ГЁГ¬ГіГ¬ Г¬Г ГІГ°ГЁГ¶Г»: " << minArray(m) << "\n";
+	cout << "ГЊГ ГЄГ±ГЁГ¬ГіГ¬ Г¬Г ГІГ°ГЁГ¶Г»: " << maxArray(m) << "\n";
+	cout << "ГЊГ ГЄГ±ГЁГ¬ГіГ¬ Г­ГЁГ¦Г­ГҐГІГ°ГҐГіГЈГ®Г«ГјГ­Г®Г© Г·Г Г±ГІГЁ: " << maxDownTriangleArray(m) << "\n";
+	cout << "ГЊГ ГЄГ±ГЁГ¬ГіГ¬ ГўГҐГ°ГµГ­ГҐГ°ГҐГіГЈГ®Г«ГјГ­Г®Г© Г·Г Г±ГІГЁ: " << maxUpTriangleArray(m) << "\n";
+	cout << "ГЊГЁГ­ГЁГ¬ГіГ¬ Г­ГЁГ¦Г­ГҐГ°ГҐГіГЈГ®Г«ГјГ­Г®Г© Г·Г Г±ГІГЁ: " << minDownTriangleArray(m) << "\n";
+	cout << "ГЊГЁГ­ГЁГ¬ГіГ¬ ГўГҐГ°ГµГ­ГҐГ°ГҐГіГЈГ®Г«ГјГ­Г®Г© Г·Г Г±ГІГЁ: " << minUpTriangleArray(m) << "\n";
+	cout << "ГЊГЁГ­ГЁГ¬ГіГ¬ ГЈГ«Г ГўГ­Г®Г© Г¤ГЁГ ГЈГ®Г­Г Г«ГЁ: " << minMajorDiag(m) << "\n";
+	cout << "ГЊГ ГЄГ±ГЁГ¬ГіГ¬ ГЈГ«Г ГўГ­Г®Г© Г¤ГЁГ ГЈГ®Г­Г Г«ГЁ: " << maxMajorDiag(m) << "\n";
+	cout << "ГЊГЁГ­ГЁГ¬ГіГ¬ ГўГІГ®Г°Г®Г±ГІГҐГЇГҐГ­Г®Г© Г¤ГЁГ ГЈГ®Г­Г Г«ГЁ: " << minSecondDiag(m) << "\n";
+	cout << "ГЊГ ГЄГ±ГЁГ¬ГіГ¬ ГўГІГ®Г°Г®Г±ГІГҐГЇГҐГ­Г­Г®Г© Г¤ГЁГ ГЈГ®Г­Г Г«ГЁ: " << maxSecondDiag(m) << "\n";
+	cout << "Г‘Г°ГҐГ¤Г­ГҐГҐ Г Г°ГЁГґГ¬ГҐГІГЁГ·ГҐГ±ГЄГ®ГҐ ГЅГ«Г«ГҐГ¬ГҐГ­ГІГ®Гў Г¬Г ГІГ°ГЁГ¶Г»: " << midArifmeticMatrix(m) << "\n";
+	cout << "Г‘Г°ГҐГ¤Г­ГҐГҐ Г Г°ГЁГґГ¬ГҐГІГЁГ·ГҐГ±ГЄГ®ГҐ Г­ГЁГ¦Г­ГҐГЈГ® ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄГ : " << midBottomTriangleMatrix(m) << "\n";
+	cout << "Г‘Г°ГҐГ¤Г­ГҐГҐ Г Г°ГЁГґГ¬ГҐГІГЁГ·ГҐГ±ГЄГ®ГҐ ГўГҐГ°ГµГ­ГҐГЈГ® ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄГ : " << midUpTriangleMatrix(m) << "\n";
+	cout << "Г‘ГіГ¬Г¬Г  Г±ГІГ°Г®ГЄ Г¬Г Г±Г±ГЁГўГ : "; summLineOnMatrix(m);
+	cout << "Г‘ГіГ¬Г¬Г  Г±ГІГ®Г«ГЎГ¶Г®Гў Г¬Г Г±Г±ГЁГўГ : "; summColumnOnMatrix(m);
+	cout << "ГЊГЁГ­ГЁГ¬Г Г«ГјГ­Г®ГҐ Г·ГЁГ±Г«Г® Гў Г±ГІГ°Г®ГЄГ Гµ Г¬Г Г±Г±ГЁГўГ : "; minNumberOnLine(m);
+	cout << "ГЊГЁГ­ГЁГ¬Г Г«ГјГ­Г®ГҐ Г·ГЁГ±Г«Г® Гў Г±ГІГ®Г«ГЎГ¶Г®Г Гµ Г¬Г Г±Г±ГЁГўГ : "; minNumberOnColumn(m);
+	cout << "ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г®ГҐ Г·ГЁГ±Г«Г® Гў Г±ГІГ°Г®ГЄГ Гµ Г¬Г Г±Г±ГЁГўГ : "; maxNumberOnLine(m);
+	cout << "ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г®ГҐ Г·ГЁГ±Г«Г® Гў Г±ГІГ®Г«ГЎГ¶Г Гµ Г¬Г Г±Г±ГЁГўГ : "; maxNumberOnColumn(m);
+	cout << "Г‘Г°ГҐГ¤Г­ГҐГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ Гў Г±ГІГ°Г®ГЄГ Гµ Г¬Г ГІГ°ГЁГ¶Г»: "; midNumberOnLine(m);
+	cout << "Г‘Г°ГҐГ¤Г­ГҐГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ Гў Г±ГІГ®Г«ГЎГ¶Г Гµ Г¬Г ГІГ°ГЁГ¶Г»: "; midNumberOnColumn(m);
+	cout << "Г‘ГіГ¬Г¬Г  ГЅГ«Г«ГҐГ¬ГҐГ­ГІГ®Гў Г­ГЁГ¦Г­ГҐГЈГ® ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄГ  Г¬Г ГІГ°ГЁГ¶Г»: " << summBottomTriangle(m) << "\n";
+	cout << "Г‘ГіГ¬Г¬Г  ГЅГ«Г«ГҐГ¬ГҐГ­ГІГ®Гў ГўГҐГ°ГµГ­ГҐГЈГ® ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄГ  Г¬Г ГІГ°ГЁГ¶Г»: " << summUpTriangle(m) << "\n";
+	cout << "ГЌГ ГЁГЎГ®Г«ГҐГҐ ГЇГ°ГЁГЎГ«ГЁГ¦ГҐГ­Г­Г»Г© ГЅГ«Г«ГҐГ¬ГҐГ­ГІ Г¬Г Г±Г±ГЁГўГ  ГЄ Г±Г°ГҐГ¤Г­ГҐГ¬Гі: " << closest(m) << "\n";
 	return 0;
 }
 
-float minArray(float arr[N][N]) {//Функция поиска минимума матрицы
+float minArray(float arr[N][N]) {//Г”ГіГ­ГЄГ¶ГЁГї ГЇГ®ГЁГ±ГЄГ  Г¬ГЁГ­ГЁГ¬ГіГ¬Г  Г¬Г ГІГ°ГЁГ¶Г»
 	float min = arr[0][0];
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
@@ -84,7 +84,7 @@ float minArray(float arr[N][N]) {//Функция поиска минимума матрицы
 	return min;
 }
 
-float maxArray(float arr[N][N]) {//Функция поиска максимального значения в матрице
+float maxArray(float arr[N][N]) {//Г”ГіГ­ГЄГ¶ГЁГї ГЇГ®ГЁГ±ГЄГ  Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г®ГЈГ® Г§Г­Г Г·ГҐГ­ГЁГї Гў Г¬Г ГІГ°ГЁГ¶ГҐ
 	float max = 0;
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
@@ -94,7 +94,7 @@ float maxArray(float arr[N][N]) {//Функция поиска максимального значения в матри
 	return max;
 }
 
-float maxDownTriangleArray(float arr[N][N]) {//Максимум нижнего треугольника
+float maxDownTriangleArray(float arr[N][N]) {//ГЊГ ГЄГ±ГЁГ¬ГіГ¬ Г­ГЁГ¦Г­ГҐГЈГ® ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄГ 
 	float max = 0;
 	int endArr = 0;
 	for (int i = 0; i < N; i++) {
@@ -106,7 +106,7 @@ float maxDownTriangleArray(float arr[N][N]) {//Максимум нижнего треугольника
 	return max;
 }
 
-float maxUpTriangleArray(float arr[N][N]) {//Максимум верхнего треугольника
+float maxUpTriangleArray(float arr[N][N]) {//ГЊГ ГЄГ±ГЁГ¬ГіГ¬ ГўГҐГ°ГµГ­ГҐГЈГ® ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄГ 
 	float max = 0;
 	int startArr = 0;
 	for (int i = 0; i < N; i++) {
@@ -118,7 +118,7 @@ float maxUpTriangleArray(float arr[N][N]) {//Максимум верхнего треугольника
 	return max;
 }
 
-float minDownTriangleArray(float arr[N][N]) {//Минимум нижнего треугольника
+float minDownTriangleArray(float arr[N][N]) {//ГЊГЁГ­ГЁГ¬ГіГ¬ Г­ГЁГ¦Г­ГҐГЈГ® ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄГ 
 	float min = arr[0][0];
 	int endArr = 0;
 	for (int i = 0; i < N; i++) {
@@ -130,7 +130,7 @@ float minDownTriangleArray(float arr[N][N]) {//Минимум нижнего треугольника
 	return min;
 }
 
-float minUpTriangleArray(float arr[N][N]) {//Максимум нижнего треугольника
+float minUpTriangleArray(float arr[N][N]) {//ГЊГ ГЄГ±ГЁГ¬ГіГ¬ Г­ГЁГ¦Г­ГҐГЈГ® ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄГ 
 	float min = arr[0][0];
 	int startArr = 0;
 	for (int i = 0; i < N; i++) {
@@ -142,21 +142,21 @@ float minUpTriangleArray(float arr[N][N]) {//Максимум нижнего треугольника
 	return min;
 }
 
-float minMajorDiag(float arr[N][N]) {//Минимум главной диагонали матрицы
+float minMajorDiag(float arr[N][N]) {//ГЊГЁГ­ГЁГ¬ГіГ¬ ГЈГ«Г ГўГ­Г®Г© Г¤ГЁГ ГЈГ®Г­Г Г«ГЁ Г¬Г ГІГ°ГЁГ¶Г»
 	float min = arr[0][0];
 	for (int i = 0; i < N; i++)
 		if (min > arr[i][i]) min = arr[i][i];
 	return min;
 }
 
-float maxMajorDiag(float arr[N][N]) {//Максимум главной диагонали
+float maxMajorDiag(float arr[N][N]) {//ГЊГ ГЄГ±ГЁГ¬ГіГ¬ ГЈГ«Г ГўГ­Г®Г© Г¤ГЁГ ГЈГ®Г­Г Г«ГЁ
 	float max = 0;
 	for (int i = 0; i < N; i++)
 		if (max < arr[i][i]) max = arr[i][i];
 	return max;
 }
 
-float minSecondDiag(float arr[N][N]) {//Минимум второстепенной диагонали
+float minSecondDiag(float arr[N][N]) {//ГЊГЁГ­ГЁГ¬ГіГ¬ ГўГІГ®Г°Г®Г±ГІГҐГЇГҐГ­Г­Г®Г© Г¤ГЁГ ГЈГ®Г­Г Г«ГЁ
 	float min = arr[0][4];
 	for (int i = 0; i < N; i++) {
 		for (int j = 4; j >= 0; j--) {
@@ -168,7 +168,7 @@ float minSecondDiag(float arr[N][N]) {//Минимум второстепенной диагонали
 	return min;
 }
 
-float maxSecondDiag(float arr[N][N]) {//Максимум второстепенной диагонали
+float maxSecondDiag(float arr[N][N]) {//ГЊГ ГЄГ±ГЁГ¬ГіГ¬ ГўГІГ®Г°Г®Г±ГІГҐГЇГҐГ­Г­Г®Г© Г¤ГЁГ ГЈГ®Г­Г Г«ГЁ
 	float max = arr[0][4];
 	for (int i = 0; i < N; i++) {
 		for (int j = 4; j >= 0; j--) {
@@ -180,7 +180,7 @@ float maxSecondDiag(float arr[N][N]) {//Максимум второстепенной диагонали
 	return max;
 }
 
-float midArifmeticMatrix(float arr[N][N]) {//Среднее арифметическое
+float midArifmeticMatrix(float arr[N][N]) {//Г‘Г°ГҐГ¤Г­ГҐГҐ Г Г°ГЁГґГ¬ГҐГІГЁГ·ГҐГ±ГЄГ®ГҐ
 	float mid = 0;
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
@@ -191,7 +191,7 @@ float midArifmeticMatrix(float arr[N][N]) {//Среднее арифметическое
 	return mid;
 }
 
-float midBottomTriangleMatrix(float arr[N][N]) {//Среднее арифметическое нижнего треугольника
+float midBottomTriangleMatrix(float arr[N][N]) {//Г‘Г°ГҐГ¤Г­ГҐГҐ Г Г°ГЁГґГ¬ГҐГІГЁГ·ГҐГ±ГЄГ®ГҐ Г­ГЁГ¦Г­ГҐГЈГ® ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄГ 
 	float mid = 0;
 	int count = 0;
 	int ref = 0;
@@ -206,7 +206,7 @@ float midBottomTriangleMatrix(float arr[N][N]) {//Среднее арифметическое нижнего
 	return mid;
 }
 
-float midUpTriangleMatrix(float arr[N][N]) {//Среднее арифметическое верхнего треугольника
+float midUpTriangleMatrix(float arr[N][N]) {//Г‘Г°ГҐГ¤Г­ГҐГҐ Г Г°ГЁГґГ¬ГҐГІГЁГ·ГҐГ±ГЄГ®ГҐ ГўГҐГ°ГµГ­ГҐГЈГ® ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄГ 
 	float mid = 0;
 	int count = 0;
 	int ref = 0;
@@ -346,7 +346,7 @@ float summUpTriangle(float arr[N][N]) {
 	return summ;
 }
 
-float closest(float arr[N][N]) {//Наиболее подходящий эллемент к среднему
+float closest(float arr[N][N]) {//ГЌГ ГЁГЎГ®Г«ГҐГҐ ГЇГ®Г¤ГµГ®Г¤ГїГ№ГЁГ© ГЅГ«Г«ГҐГ¬ГҐГ­ГІ ГЄ Г±Г°ГҐГ¤Г­ГҐГ¬Гі
 	float mid = midArifmeticMatrix(arr);
 	float def = abs(mid - arr[0][0]);
 	float result = arr[0][0];
