@@ -4,8 +4,8 @@
 using namespace std;
 
 template <class T>
-T getmax(T t1, T t2)		//Âîçâðàøàåò áîëüøèé èç äâóõ
-{					// ïàðàìåòðîâ
+T getmax(T t1, T t2)		//Ð’Ð¾Ð·Ð²Ñ€Ð°ÑˆÐ°ÐµÑ‚ Ð±Ð¾Ð»ÑŒÑˆÐ¸Ð¹ Ð¸Ð· Ð´Ð²ÑƒÑ…
+{					// Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð¾Ð²
     return t1 > t2 ? t1 : t2;
 }
 const char* getmax(const char* s1, const char* s2) {
