@@ -5,15 +5,15 @@ class Stroka {
 private:
     char str[80];
 public:
-    Stroka(const char* string = "");  // Используем const char*
+    Stroka(const char* string = "");  
     Stroka(const Stroka& s);
     ~Stroka();
     Stroka& operator=(const Stroka& s);
-    Stroka operator+(const Stroka& s) const;  // const метод
-    bool operator==(const Stroka& s) const;   // const метод
-    int dlina() const;                        // const метод
+    Stroka operator+(const Stroka& s) const;  
+    bool operator==(const Stroka& s) const;   
+    int dlina() const;                       
     void vvod();
-    void vyvod() const;                       // const метод
+    void vyvod() const;                     
 };
 
-#endif // STROKA_H
+#endif 
